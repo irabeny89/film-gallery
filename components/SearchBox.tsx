@@ -28,7 +28,8 @@ export default function SearchBox({ setShowResult }: SearchBoxPropsType) {
       };
 
       search
-        ? getSearchResult({ variables: { title: search } })
+        ? (getSearchResult({ variables: { title: search } }),
+          e.currentTarget.reset())
         : (e.preventDefault(), e.stopPropagation());
     };
 
