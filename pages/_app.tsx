@@ -9,7 +9,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ApolloProvider {...{ client }}>
       <SSRProvider>
-        <Component {...pageProps} />;
+        <Component {...pageProps} />
       </SSRProvider>
     </ApolloProvider>
   );
