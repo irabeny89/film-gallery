@@ -16,7 +16,7 @@ export default function SearchResultModal({
     <Modal show={show} onHide={() => setShow(false)} size="lg">
       <Modal.Header closeButton>
         <Modal.Title>
-          <CgSearchFound /> Search results...
+          <CgSearchFound /> Search results ({searchResults.length})
         </Modal.Title>
       </Modal.Header>
       <Modal.Body className={styles.grid}>

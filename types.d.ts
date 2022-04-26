@@ -6,7 +6,7 @@ type SearchResultModalPropsType = {
 };
 
 type SearchBoxPropsType = {
-  setShow: SearchResultModalPropsType["setShow"];
+  setShowResult: SearchResultModalPropsType["setShow"];
 };
 
 type MovieType = Record<
@@ -14,4 +14,4 @@ type MovieType = Record<
   string
 >;
 
-type filmSearchResultType = Record<"Search", MovieType[]>;
+type FilmSearchResultType = Record<"Search", MovieType[]>;

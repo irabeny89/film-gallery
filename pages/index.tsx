@@ -29,7 +29,7 @@ const Home: NextPage = () => {
           </code>
         </p>
         <SearchResultModal show={showResult} setShow={setShowResult} />
-        <SearchBox setShow={setShowResult} />
+        <SearchBox setShowResult={setShowResult} />
         <FilmList />
       </main>
 

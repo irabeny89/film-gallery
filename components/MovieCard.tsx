@@ -11,8 +11,13 @@ export default function MovieCard({
   Year,
   imdbID,
 }: MovieType) {
-  const imageSrc = (config.network === "offline") ? "/vercel.svg" : Poster;
-  
+  const imageSrc =
+    config.network === "offline"
+      ? "/vercel.svg"
+      : Poster === "N/A"
+      ? "/vercel.svg"
+      : Poster;
+
   return (
     <div className={styles.card}>
       <div>
