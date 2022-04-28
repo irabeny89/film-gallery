@@ -19,7 +19,7 @@ export default function MovieCard({
       : Poster;
 
   return (
-    <div className={styles.card}>
+    <div className={styles.card} data-testid="film-card">
       <div>
         <HiHashtag /> {imdbID} | <HiArchive /> {Type} | <HiCalendar /> {Year}
       </div>

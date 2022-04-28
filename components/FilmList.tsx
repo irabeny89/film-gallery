@@ -24,7 +24,7 @@ export default function FilmList() {
       {config.generalErrorMessage}
     </Alert>
   ) : (
-    <div className={styles.grid}>
+    <div className={styles.grid} data-testid="film-list">
       {data?.film?.Search.slice(-9).map((film) => (
         <MovieCard key={film.imdbID} {...film} />
       ))}
