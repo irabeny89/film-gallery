@@ -1,4 +1,4 @@
-# Film Gallery
+# :cinema: Film Gallery
 
 > This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
@@ -6,7 +6,7 @@ This is a web app that uses the [OMDB API](http://www.omdbapi.com) to serve movi
 
 It allow any film searches and renders the results in a nice and simple UI.
 
-## Getting Started
+## :computer: Getting Started
 
 First, you need an API key from OMDB website [link here](http://www.omdbapi.com/apikey.aspx).
 
@@ -50,17 +50,17 @@ pnpm test
 
 ![automated test results](./public/film-gallery%20tests.png)
 
-## Learn More
+## :book: Learn More
 
 To learn more about Next.js, take a look at the following resources:
 
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-## Deploy on Vercel
+## :rocket: Deploy on Vercel
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
-> You can check out the live web app [here](https://film-gallery.vercel.app) - your feedback is welcome!
+> You can check out the live web app [https://film-gallery.vercel.app](https://film-gallery.vercel.app) - your feedback is welcome :smile:!
