@@ -2,7 +2,7 @@ import Spinner from "react-bootstrap/Spinner";
 import Alert from "react-bootstrap/Alert";
 import styles from "styles/Home.module.css";
 import { useQuery } from "@apollo/client";
-import MovieCard from "./MovieCard";
+import FilmCard from "./FilmCard";
 import { SEARCH_TITLE } from "graphql/documentNodes";
 import { FilmSearchResultType } from "types";
 import config from "config";
@@ -26,7 +26,7 @@ export default function FilmList() {
   ) : (
     <div className={styles.grid} data-testid="film-list">
       {data?.film?.Search.slice(-9).map((film) => (
-        <MovieCard key={film.imdbID} {...film} />
+        <FilmCard key={film.imdbID} {...film} />
       ))}
     </div>
   );

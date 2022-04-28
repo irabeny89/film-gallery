@@ -1,16 +1,16 @@
 import styles from "styles/Home.module.css";
-import { MovieType } from "types";
+import { FilmType } from "types";
 import Image from "next/image";
 import { HiArchive, HiCalendar, HiFilm, HiHashtag } from "react-icons/hi";
 import config from "config";
 
-export default function MovieCard({
+export default function FilmCard({
   Title,
   Poster,
   Type,
   Year,
   imdbID,
-}: MovieType) {
+}: FilmType) {
   const imageSrc =
     config.network === "offline"
       ? "/vercel.svg"

@@ -9,9 +9,9 @@ type SearchBoxPropsType = {
   setShowResult: SearchResultModalPropsType["setShow"];
 };
 
-type MovieType = Record<
+type FilmType = Record<
   "Title" | "Year" | "imdbID" | "Type" | "Poster",
   string
 >;
 
-type FilmSearchResultType = Record<"Search", MovieType[]>;
+type FilmSearchResultType = Record<"Search", FilmType[]>;
