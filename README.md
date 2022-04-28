@@ -34,7 +34,7 @@ yarn dev
 pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result. ![project image](./public/film-gallery.png)
 
 You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 
@@ -47,6 +47,8 @@ yarn test
 # or
 pnpm test
 ```
+
+![automated test results](./public/film-gallery%20tests.png)
 
 ## Learn More
 
