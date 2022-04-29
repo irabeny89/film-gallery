@@ -1,4 +1,5 @@
 import { useReactiveVar } from "@apollo/client";
+import config from "config";
 import { filmSearchResultVar } from "graphql/reactiveVars";
 import Modal from "react-bootstrap/Modal";
 import { CgSearchFound } from "react-icons/cg";
@@ -19,7 +20,7 @@ export default function SearchResultModal({
           <CgSearchFound /> Search results (
           {searchResults?.length ?? (
             <span className="text-info">
-              Film not found. Try another film title/IMDB ID.
+              {config.notFoundErrorMessage}
             </span>
           )}
           )

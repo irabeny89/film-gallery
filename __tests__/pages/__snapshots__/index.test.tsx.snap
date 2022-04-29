@@ -80,14 +80,15 @@ exports[`Home Page matches snapshot. 1`] = `
                 arial-label="search GitHub repositories"
                 class="form-control"
                 name="search"
-                placeholder="Enter movie title"
+                placeholder="Enter film title"
               />
               <label>
-                Enter movie title
+                Enter film title
               </label>
             </div>
             <button
               class="btn btn-primary"
+              data-testid="searchButton"
               type="submit"
             >
               <svg

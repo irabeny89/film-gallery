@@ -67,7 +67,7 @@ export default function SearchBox({ setShowResult }: SearchBoxPropsType) {
                   name="search"
                 />
               </Form.FloatingLabel>
-              <Button type="submit">
+              <Button type="submit" data-testid="searchButton">
                 {loading ? (
                   <Spinner animation="border" />
                 ) : (
