@@ -14,6 +14,9 @@ import { useLazyQuery } from "@apollo/client";
 import { SEARCH_TITLE } from "graphql/documentNodes";
 import config from "config";
 import { filmSearchResultVar } from "graphql/reactiveVars";
+import mockSearchResult from "data/mockSearchResult";
+
+const { generalErrorMessage, network } = config;
 
 export default function SearchBox({ setShowResult }: SearchBoxPropsType) {
   const [getSearchResult, { data, loading, error }] = useLazyQuery<
@@ -28,8 +31,12 @@ export default function SearchBox({ setShowResult }: SearchBoxPropsType) {
       };
 
       search
-        ? (getSearchResult({ variables: { title: search } }),
-          e.currentTarget.reset())
+        ? network === "offline"
+          ? (e.currentTarget.reset(),
+            filmSearchResultVar(mockSearchResult),
+            setShowResult(true))
+          : (getSearchResult({ variables: { title: search } }),
+            e.currentTarget.reset())
         : (e.preventDefault(), e.stopPropagation());
     };
 
@@ -53,9 +60,9 @@ export default function SearchBox({ setShowResult }: SearchBoxPropsType) {
         <Col sm="10">
           <Form onSubmit={handleSearch}>
             <InputGroup className="justify-content-center">
-              <Form.FloatingLabel label="Enter movie title">
+              <Form.FloatingLabel label="Enter film title">
                 <Form.Control
-                  placeholder="Enter movie title"
+                  placeholder="Enter film title"
                   arial-label="search GitHub repositories"
                   name="search"
                 />

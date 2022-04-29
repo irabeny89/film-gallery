@@ -1,11 +1,19 @@
+import Spinner from "react-bootstrap/Spinner";
 import SearchBox from "components/SearchBox";
-import SearchResultModal from "components/SearchResultModal";
 import type { NextPage } from "next";
 import Head from "next/head";
 import { useState } from "react";
 import styles from "../styles/Home.module.css";
 import { HiHeart, HiFilm } from "react-icons/hi";
 import FilmList from "components/FilmList";
+import dynamic from "next/dynamic";
+
+const SearchResultModal = dynamic(
+  () => import("components/SearchResultModal"),
+  {
+    loading: () => <Spinner animation="border" />,
+  }
+);
 
 const Home: NextPage = () => {
   const [showResult, setShowResult] = useState(false);

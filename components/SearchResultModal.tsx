@@ -16,11 +16,17 @@ export default function SearchResultModal({
     <Modal show={show} onHide={() => setShow(false)} size="lg">
       <Modal.Header closeButton>
         <Modal.Title>
-          <CgSearchFound /> Search results ({searchResults.length})
+          <CgSearchFound /> Search results (
+          {searchResults?.length ?? (
+            <span className="text-info">
+              Film not found. Try another film title/IMDB ID.
+            </span>
+          )}
+          )
         </Modal.Title>
       </Modal.Header>
       <Modal.Body className={styles.grid}>
-        {searchResults.map((movie) => (
+        {searchResults?.map((movie) => (
           <FilmCard key={movie.imdbID} {...movie} />
         ))}
       </Modal.Body>
